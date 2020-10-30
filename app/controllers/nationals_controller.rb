@@ -17,7 +17,7 @@ class NationalsController < ApplicationController
 
   def update
     @national = National.find(params[:id])
-    if @national.update!(national)
+    if @national.update!(national_params)
       render status: 200, json: {
        message: "This national park has been updated successfully."
        }
@@ -26,7 +26,7 @@ class NationalsController < ApplicationController
 
   def destroy
     @national = National.find(params[:id])
-    if @national.destroy!(state_params)
+    if @national.destroy!
       render status: 200, json: {
        message: "This national park has been destroyed successfully."
        }
