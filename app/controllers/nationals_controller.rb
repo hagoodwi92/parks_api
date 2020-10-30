@@ -11,7 +11,7 @@ class NationalsController < ApplicationController
   end
 
   def create
-    @national = National.create(national_params)
+    @national = National.create!(national_params)
     json_response(@national)
   end
 
