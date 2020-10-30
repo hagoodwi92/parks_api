@@ -6,4 +6,7 @@ class ApplicationController < ActionController::API
   rescue_from ActiveRecord::RecordInvalid do |exception|
     json_response({ message: exception.message }, :bad_request)
   end
+  # rescue_from ActiveRecord::RoutingError do |exception|
+  #   json_response({ message: exception.message }, :not_found)
+  # end
 end
