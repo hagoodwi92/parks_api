@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+gem 'rack-attack'
 gem 'will_paginate', '~> 3.1.0'
 gem "factory_bot_rails"
 gem 'faker'
