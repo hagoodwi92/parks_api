@@ -12,17 +12,25 @@ class NationalsController < ApplicationController
 
   def create
     @national = National.create!(national_params)
-    json_response(@national)
+    json_response(@national, :created)
   end
 
   def update
     @national = National.find(params[:id])
-    @national.update(national_params)
+    if @national.update!(national)
+      render status: 200, json: {
+       message: "This national park has been updated successfully."
+       }
+    end
   end
 
   def destroy
     @national = National.find(params[:id])
-    @national.destroy
+    if @national.destroy!(state_params)
+      render status: 200, json: {
+       message: "This national park has been destroyed successfully."
+       }
+    end
   end
 
   private
