@@ -16,13 +16,25 @@ class Seed
   def generate_national_parks
       National.create!(national_park: "Acadia" , state: "Maine" )
       National.create!(national_park: "American Samoa", state: "Samoa")
-      National.create!(national_park: "Arches", state: "Utah" )
+      National.create!(national_park: "Badlands National Park", state: "South Dakota" )
+      National.create!(national_park: "Big Bend National Park", state: "Texas" )
+      National.create!(national_park: "Biscayne National Park", state: "Florida" )
   end
   def generate_state_parks
-    State.create!(state_park: "Acadia")
-    State.create!(state_park: "American Samoa")
-    State.create!(state_park: "Arches")
+    State.create!(state_park: "Milo McIver State Park")
+    State.create!(state_park: "Wallowa Lake State Park")
+    State.create!(state_park: "LaPine State Park")
+    State.create!(state_park: "Sunset Bay")
+    State.create!(state_park: "Beverly Beach State Park")
+    State.create!(state_park: "Shore Acres")
+    State.create!(state_park: "Ecola State Park")
+    State.create!(state_park: "The Cove Palisades State Park")
+    State.create!(state_park: "Jessie M. Honeyman State Park")
+    State.create!(state_park: "Cape Lookout")
+    State.create!(state_park: "Oswald West")
+    State.create!(state_park: "Smith Rock")
+    State.create!(state_park: "Silver Falls")
+    State.create!(state_park: "Fort Stevens")
 end
 end
-
 Seed.begin

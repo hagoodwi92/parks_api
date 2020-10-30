@@ -31,6 +31,6 @@ class StatesController < ApplicationController
   end
 
   def state_params
-    params.permit(:state_park, :state)
+    params.permit(:state_park)
   end
 end
