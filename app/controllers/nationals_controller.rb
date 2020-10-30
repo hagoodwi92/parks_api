@@ -1,6 +1,8 @@
 class NationalsController < ApplicationController
 
   def index
+    @nationals = National.all
+    state = params[:state]
     @nationals = National.paginate(page: params[:page], :per_page => 5)
     json_response(@nationals)
   end
