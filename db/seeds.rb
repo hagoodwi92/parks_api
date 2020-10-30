@@ -19,6 +19,10 @@ class Seed
       National.create!(national_park: "Badlands National Park", state: "South Dakota" )
       National.create!(national_park: "Big Bend National Park", state: "Texas" )
       National.create!(national_park: "Biscayne National Park", state: "Florida" )
+      National.create!(national_park: "Channel Islands National Park", state: "California" )
+      National.create!(national_park: "Death Valley National Park", state: "California" )
+      National.create!(national_park: "Joshua Tree National Park", state: "California" )
+
   end
   def generate_state_parks
     State.create!(state_park: "Milo McIver State Park")
